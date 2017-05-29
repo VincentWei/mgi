@@ -1,0 +1,41 @@
+RELEASE NOTES FOR MGI V2.0
+==========================
+
+Important Changes since mGi V1.3
+--------------------------------
+
+   mGi V2.0 provides a mature softkey implementation.
+
+RELEASE NOTES FOR MGI V1.3
+==========================
+
+Important Changes since mGi V1.2
+--------------------------------
+
+   mGi V1.3 provides support for MiniGUI V3.0.1
+
+RELEASE NOTES FOR MGI V1.2
+==========================
+
+Important Changes since mGi V1.1
+--------------------------------
+
+   mGi V1.2 provides phone keypad input method.
+   mGi V1.2 provides support for VxWorks.
+
+Known Bugs and Limitations
+--------------------------
+
+   mGi V1.2 can only run on MiniGUI V2.0.4/1.6.10 and later versions. 
+It provides support for MiniGUI-Processes and MiniGUI-Threads run-time 
+modes. However, MiniGUI-Standalone is not supported yet.
+
+BUG REPORT
+==========
+
+   Any bug or comment, please send to consult@minigui.com.
+
+----------------------------------
+Feynman Software
+http://www.minigui.com
+

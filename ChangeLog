@@ -1,0 +1,247 @@
+*******************************************************************************
+What's new in this version (2.0.0, 2008/12/31):
+
+04/29/2010. ENHANCEMNET #1 to suport utf-8 encoding in softkeypad, add a new
+example skb_test (zhaochengzhang)
+	* src/softkeyboard/softkeywindow.h
+	* src/softkeyboard/softkeywindow.c
+	* examples/skb_test.c 
+	* examples/Makefile.am
+
+03/02/2010. BUGFIXING #4457: When MiniGUI configure as --enable-standlone,
+can not compile mgi.(zouqizhi)
+	* include/mgi-phone.h
+
+01/21/2010: bug fix 4388  when holding the mouse left button down, 
+softkeyboard tip window does not disappear as mouse pionter 
+leave the client area.(zhaochengzhang)
+	* src/softkeyboard/softkeyboard/en_kbd.c
+	* src/softkeyboard/softkeyboard/pinyin_kbd.c
+	* src/softkeyboard/softkeyboard/common.c
+	* src/softkeyboard/softkeywindow.c
+
+03/02/2009: make dist error
+	* change file src/Makefile.am to fix the BUG
+
+01/06/2009. FIXBUF buffer overflow: pinyin ime: include/ime_pinyin.h
+MAX_INPUT_LENGTH must greater of equal than SW_STR_LEN(32) in
+rc/softkeyboard/softkeyboard/softkeyboard.h used by strok_window_t
+(dongjunjie)
+	* include/ime_pinyin.h
+	* m4/Makefile.in
+	* src/ime_pinyin.c
+	* src/softkeyboard/softkeyboard/punct_kbd.c
+
+
+12/10. merge libsoftkeywin into libmgi.
+	* include/mgpti.h
+	* configure.in
+	* ChangeLog
+	* src/softkeyboard
+	* src/softkeyboard/tooltip.h
+	* src/softkeyboard/softkeywindow.h
+	* src/softkeyboard/tooltip.c
+	* src/softkeyboard/softkeyboard
+	* src/softkeyboard/softkeyboard/num_kbd.c
+	* src/softkeyboard/softkeyboard/ime.h
+	* src/softkeyboard/softkeyboard/softkeyboard.h
+	* src/softkeyboard/softkeyboard/480-272
+	* src/softkeyboard/softkeyboard/480-272/char_key_mask.c
+	* src/softkeyboard/softkeyboard/480-272/num_kbd_bkg.c
+	* src/softkeyboard/softkeyboard/480-272/bitmapfont.c
+	* src/softkeyboard/softkeyboard/480-272/en_kbd_bkg.c
+	* src/softkeyboard/softkeyboard/480-272/tooltip_mask.c
+	* src/softkeyboard/softkeyboard/480-272/tooltip_bk.c
+	* src/softkeyboard/softkeyboard/480-272/pinyin_kbd_bkg.c
+	* src/softkeyboard/softkeyboard/480-272/left_arrow_enable.c
+	* src/softkeyboard/softkeyboard/480-272/right_arrow_disable.c
+	* src/softkeyboard/softkeyboard/480-272/func_key_mask.c
+	* src/softkeyboard/softkeyboard/480-272/left_arrow_disable.c
+	* src/softkeyboard/softkeyboard/480-272/punct_kbd_bkg.c
+	* src/softkeyboard/softkeyboard/480-272/sel_text_bkgnd.c
+	* src/softkeyboard/softkeyboard/480-272/right_arrow_enable.c
+	* src/softkeyboard/softkeyboard/480-272/size_480x272.h
+	* src/softkeyboard/softkeyboard/en_kbd.c
+	* src/softkeyboard/softkeyboard/320-240
+	* src/softkeyboard/softkeyboard/320-240/char_key_mask.c
+	* src/softkeyboard/softkeyboard/320-240/num_kbd_bkg.c
+	* src/softkeyboard/softkeyboard/320-240/bitmapfont.c
+	* src/softkeyboard/softkeyboard/320-240/en_kbd_bkg.c
+	* src/softkeyboard/softkeyboard/320-240/tooltip_mask.c
+	* src/softkeyboard/softkeyboard/320-240/tooltip_bk.c
+	* src/softkeyboard/softkeyboard/320-240/pinyin_kbd_bkg.c
+	* src/softkeyboard/softkeyboard/320-240/left_arrow_enable.c
+	* src/softkeyboard/softkeyboard/320-240/right_arrow_disable.c
+	* src/softkeyboard/softkeyboard/320-240/func_key_mask.c
+	* src/softkeyboard/softkeyboard/320-240/size_320x240.h
+	* src/softkeyboard/softkeyboard/320-240/left_arrow_disable.c
+	* src/softkeyboard/softkeyboard/320-240/punct_kbd_bkg.c
+	* src/softkeyboard/softkeyboard/320-240/sel_text_bkgnd.c
+	* src/softkeyboard/softkeyboard/320-240/right_arrow_enable.c
+	* src/softkeyboard/softkeyboard/pinyin_kbd.c
+	* src/softkeyboard/softkeyboard/240-320
+	* src/softkeyboard/softkeyboard/240-320/func_key_mask.c
+	* src/softkeyboard/softkeyboard/240-320/char_key_mask.c
+	* src/softkeyboard/softkeyboard/240-320/size_240x320.h
+	* src/softkeyboard/softkeyboard/240-320/num_kbd_bkg.c
+	* src/softkeyboard/softkeyboard/240-320/bitmapfont.c
+	* src/softkeyboard/softkeyboard/240-320/en_kbd_bkg.c
+	* src/softkeyboard/softkeyboard/240-320/tooltip_mask.c
+	* src/softkeyboard/softkeyboard/240-320/tooltip_bk.c
+	* src/softkeyboard/softkeyboard/240-320/left_arrow_disable.c
+	* src/softkeyboard/softkeyboard/240-320/pinyin_kbd_bkg.c
+	* src/softkeyboard/softkeyboard/240-320/left_arrow_enable.c
+	* src/softkeyboard/softkeyboard/240-320/right_arrow_disable.c
+	* src/softkeyboard/softkeyboard/240-320/punct_kbd_bkg.c
+	* src/softkeyboard/softkeyboard/240-320/right_arrow_enable.c
+	* src/softkeyboard/softkeyboard/resource.c
+	* src/softkeyboard/softkeyboard/common.c
+	* src/softkeyboard/softkeyboard/punct_kbd.c
+	* src/softkeyboard/softkeyboard/ime.c
+	* src/softkeyboard/softkeyboard/common.h
+	* src/softkeyboard/softkeywindow.c
+	* src/softkeyboard/animate
+	* src/softkeyboard/animate/animate.c
+	* src/softkeyboard/animate/my_debug.h
+	* src/softkeyboard/animate/radi_rally_animate.c
+	* src/softkeyboard/animate/instruction.c
+	* src/softkeyboard/animate/animate.h
+	* src/softkeyboard/animate/timeline.c
+	* src/softkeyboard/animate/instruction.h
+	* src/softkeyboard/animate/p-code.c
+	* src/softkeyboard/animate/common_animates
+	* src/softkeyboard/animate/common_animates/common_animates.h
+	* src/softkeyboard/animate/common_animates/alpha_animate.c
+	* src/softkeyboard/animate/common_animates/common_animates.c
+	* src/softkeyboard/animate/animate_sence.c
+	* src/softkeyboard/animate/p-code.h
+	* src/mgpti.c
+	* src/Makefile.am
+	* Makefile.am
+	* examples/Makefile.am
+	* examples/mgphonetest.c
+
+12/09. Fix bug ?; Cleanup some codes; Fix compiling error for MiniGUI2.0.x.
+	* softkeyboard/softkeywindow.c
+
+12/09. Fix bug 3188; Cleanup some codes; Fix compiling error for MiniGUI2.0.x.
+	* configure.in
+	* src/mgime.c
+	* src/keyboard.c
+	* src/Makefile.am
+	* src/mgphone.c
+	* src/mgi_helper.h
+	* softkeyboard/softkeyboard/punct_kbd.c
+	* softkeyboard/softkeyboard/num_kbd.c
+	* softkeyboard/softkeyboard/en_kbd.c
+	* softkeyboard/softkeyboard/pinyin_kbd.c
+	* softkeyboard/softkeyboard/common.c
+	* softkeyboard/softkeyboard/common.h
+	* softkeyboard/softkeywindow.c
+
+12/09. Merge softkeyboard into mgi.
+	* configure.in
+	* softkeyboard
+	* softkeyboard/tooltip.h
+	* softkeyboard/softkeywindow.h
+	* softkeyboard/Makefile.am
+	* softkeyboard/tooltip.c
+	* softkeyboard/softkeyboard
+	* softkeyboard/softkeyboard/softkeyboard.h
+	* softkeyboard/softkeyboard/480-272
+	* softkeyboard/softkeyboard/480-272/char_key_mask.c
+	* softkeyboard/softkeyboard/480-272/num_kbd_bkg.c
+	* softkeyboard/softkeyboard/480-272/bitmapfont.c
+	* softkeyboard/softkeyboard/480-272/en_kbd_bkg.c
+	* softkeyboard/softkeyboard/480-272/tooltip_mask.c
+	* softkeyboard/softkeyboard/480-272/tooltip_bk.c
+	* softkeyboard/softkeyboard/480-272/pinyin_kbd_bkg.c
+	* softkeyboard/softkeyboard/480-272/left_arrow_enable.c
+	* softkeyboard/softkeyboard/480-272/right_arrow_disable.c
+	* softkeyboard/softkeyboard/480-272/func_key_mask.c
+	* softkeyboard/softkeyboard/480-272/left_arrow_disable.c
+	* softkeyboard/softkeyboard/480-272/punct_kbd_bkg.c
+	* softkeyboard/softkeyboard/480-272/sel_text_bkgnd.c
+	* softkeyboard/softkeyboard/480-272/right_arrow_enable.c
+	* softkeyboard/softkeyboard/480-272/size_480x272.h
+	* softkeyboard/softkeyboard/punct_kbd.c
+	* softkeyboard/softkeyboard/ime.c
+	* softkeyboard/softkeyboard/num_kbd.c
+	* softkeyboard/softkeyboard/mgpti_skb.c
+	* softkeyboard/softkeyboard/ime.h
+	* softkeyboard/softkeyboard/en_kbd.c
+	* softkeyboard/softkeyboard/mgpti_skb.h
+	* softkeyboard/softkeyboard/320-240
+	* softkeyboard/softkeyboard/320-240/char_key_mask.c
+	* softkeyboard/softkeyboard/320-240/num_kbd_bkg.c
+	* softkeyboard/softkeyboard/320-240/bitmapfont.c
+	* softkeyboard/softkeyboard/320-240/en_kbd_bkg.c
+	* softkeyboard/softkeyboard/320-240/tooltip_mask.c
+	* softkeyboard/softkeyboard/320-240/tooltip_bk.c
+	* softkeyboard/softkeyboard/320-240/pinyin_kbd_bkg.c
+	* softkeyboard/softkeyboard/320-240/left_arrow_enable.c
+	* softkeyboard/softkeyboard/320-240/right_arrow_disable.c
+	* softkeyboard/softkeyboard/320-240/func_key_mask.c
+	* softkeyboard/softkeyboard/320-240/size_320x240.h
+	* softkeyboard/softkeyboard/320-240/left_arrow_disable.c
+	* softkeyboard/softkeyboard/320-240/punct_kbd_bkg.c
+	* softkeyboard/softkeyboard/320-240/sel_text_bkgnd.c
+	* softkeyboard/softkeyboard/320-240/right_arrow_enable.c
+	* softkeyboard/softkeyboard/pinyin_kbd.c
+	* softkeyboard/softkeyboard/240-320
+	* softkeyboard/softkeyboard/240-320/func_key_mask.c
+	* softkeyboard/softkeyboard/240-320/char_key_mask.c
+	* softkeyboard/softkeyboard/240-320/size_240x320.h
+	* softkeyboard/softkeyboard/240-320/num_kbd_bkg.c
+	* softkeyboard/softkeyboard/240-320/bitmapfont.c
+	* softkeyboard/softkeyboard/240-320/en_kbd_bkg.c
+	* softkeyboard/softkeyboard/240-320/tooltip_mask.c
+	* softkeyboard/softkeyboard/240-320/tooltip_bk.c
+	* softkeyboard/softkeyboard/240-320/left_arrow_disable.c
+	* softkeyboard/softkeyboard/240-320/pinyin_kbd_bkg.c
+	* softkeyboard/softkeyboard/240-320/left_arrow_enable.c
+	* softkeyboard/softkeyboard/240-320/right_arrow_disable.c
+	* softkeyboard/softkeyboard/240-320/punct_kbd_bkg.c
+	* softkeyboard/softkeyboard/240-320/right_arrow_enable.c
+	* softkeyboard/softkeyboard/resource.c
+	* softkeyboard/softkeyboard/Makefile.am
+	* softkeyboard/softkeyboard/common.c
+	* softkeyboard/softkeyboard/common.h
+	* softkeyboard/softkeywindow.c
+	* softkeyboard/animate
+	* softkeyboard/animate/animate.c
+	* softkeyboard/animate/my_debug.h
+	* softkeyboard/animate/radi_rally_animate.c
+	* softkeyboard/animate/instruction.c
+	* softkeyboard/animate/animate.h
+	* softkeyboard/animate/timeline.c
+	* softkeyboard/animate/instruction.h
+	* softkeyboard/animate/p-code.c
+	* softkeyboard/animate/Makefile.am
+	* softkeyboard/animate/common_animates
+	* softkeyboard/animate/common_animates/common_animates.h
+	* softkeyboard/animate/common_animates/alpha_animate.c
+	* softkeyboard/animate/common_animates/common_animates.c
+	* softkeyboard/animate/animate_sence.c
+	* softkeyboard/animate/p-code.h
+	* Makefile.am
+	* autogen.sh
+
+*******************************************************************************
+What's new in this version (1.3.0, 2008/08/31):
+
+08/26. Tune to run under MiniGUI V3.0.1.
+
+*******************************************************************************
+What's new in this version (1.0, 2006/01/01 ~ 2006/01/31):
+
+01/16. Fix bug of refreshing keyboard.
+	* src/keyboard.c
+
+01/14. Fix bug of closing all windows in MiniGUI-Threads running-mode. (qzlong)
+	* Add pthread_create for the IME window creating.
+	* src/mgime.c
+
+01/13. Fix bug of "quanpin" input method's number handling. (qzlong)
+	* src/keyboard.c
+

@@ -1,0 +1,44 @@
+INCLUDES=-I../include
+CC=ccpentium
+MAKE = /usr/bin/make
+CFLAGS=-g -mcpu=pentium  -march=pentium -Wall -DTOOL_FAMILY=gnu -DTOOL=gnu -D_WRS_KERNEL -DCPU=PENTIUM
+LDFLAGS=
+AR=arpentium
+TARGET_DIR = /cygdrive/c/Tornado2.2/target
+INCLUDES+=-I${TARGET_DIR}/h
+INCLUDES+=-Ic:/cross/include
+INCLUDES+=-Ic:/cross/lib
+INCLUDES+=-Ic:/cygwin/usr/include
+
+OBJECT=mgime.o \
+       keyboard.o \
+       hw_engine.o \
+       hwinput.o \
+       mgphone.o
+
+.SILENT: 
+
+#keyboard.o:keyboard.c
+#	${CC} -c $^ 
+#hzime.o:hzime.c
+#	${CC} -c $^
+
+libmgime.a:${OBJECT}
+	echo                                           
+	echo =========================================
+	echo "Generating libmgime(-lmgime) library..."
+	echo =========================================
+	${AR} -rsv $@ $^ 
+
+.c.o:
+	echo -n Compiling $< ... 
+	${CC} ${CFLAGS} ${INCLUDES} -c $<
+	echo \ ok
+
+clean:
+	echo                                           
+	echo "Cleaning the compiled files..."
+	echo                                           
+	rm -f *.o ${OBJECT} *.a
+
+
