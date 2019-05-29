@@ -5,26 +5,26 @@
 #ifdef __cplusplus
 extern "C" {
 #endif  /* __cplusplus */
- 
+
 #define INPUT_BGCOLOR           8
   /* LightBlack */
 #define INPUT_FGCOLOR           15
   /* LightWhite */
-#define INPUT_AREAY          ((18 * 24)+10) 
+#define INPUT_AREAY          ((18 * 24)+10)
 
-#define MAX_INPUT_LENGTH       32 
+#define MAX_INPUT_LENGTH       32
 
 #define MAGIC_NUMBER            "CCEGB"
 #define CIN_ENAME_LENGTH        24
 #define CIN_CNAME_LENGTH        16
-#define MAX_PHRASE_LENGTH       20 
-#define SELECT_KEY_LENGTH       16 
+#define MAX_PHRASE_LENGTH       20
+#define SELECT_KEY_LENGTH       16
 #define END_KEY_LENGTH          16
-#define MAX_SEL_LENGTH 			58
+#define MAX_SEL_LENGTH          58
 
 #define InputAreaX              16
 /* key of toggle input method */
-#define NR_INPUTMETHOD	10
+#define NR_INPUTMETHOD   10
 
 typedef struct {
     unsigned long key1;        /* sizeof(ITEM=12) */
@@ -56,8 +56,8 @@ typedef struct {
 } ime_input_table;
 
 typedef struct {
-	short l, t, r, b;
-} hit_addr;  
+   short l, t, r, b;
+} hit_addr;
 
 void __mg_ime_writemsg (BYTE* buffer, int len, LPARAM lParam, BOOL bDByte);
 void __mg_ime_outchar (unsigned char ch, LPARAM lParam);

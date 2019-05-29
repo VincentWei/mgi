@@ -3,7 +3,7 @@
  * \author Wei Yongming <ymwei@minigui.org>
  * \date 2008/08/12
  *
- * This file includes input method interfaces of mGi. 
+ * This file includes input method interfaces of mGi.
  */
 
 /*
@@ -11,26 +11,25 @@
  *
  * mGi (MiniGUI Input Method) is a component of MiniGUI.
  *
- * MiniGUI is a compact cross-platform Graphics User Interface 
+ * MiniGUI is a compact cross-platform Graphics User Interface
  * (GUI) support system for real-time embedded systems.
- *                  
- * Copyright (C) 2002-2008 Feynman Software.
+ *
+ * Copyright (C) 2002-2019 FMSoft.
  */
 
 #ifndef __MGI_H__
 #define __MGI_H__
 
-#include <minigui/common.h> 
-#include <minigui/minigui.h> 
-#include <minigui/gdi.h> 
-#include <minigui/window.h> 
-#include <minigui/control.h> 
+#include <minigui/common.h>
+#include <minigui/minigui.h>
+#include <minigui/gdi.h>
+#include <minigui/window.h>
+#include <minigui/control.h>
 #include <minigui/endianrw.h>
 
 #ifdef __cplusplus
-extern  "C"
-{
-#endif                          /* __cplusplus */
+extern  "C" {
+#endif /* __cplusplus */
 
     /**
      * \addtogroup defs Defines
@@ -64,7 +63,7 @@ extern  "C"
     /** @} end of defs */
 
     /**
-     *  \defgroup container_win_ncs Notification codes of IME container window 
+     *  \defgroup container_win_ncs Notification codes of IME container window
      *  @{
      */
 
@@ -76,7 +75,7 @@ extern  "C"
 #define MGIN_SKIME      300
 
 /**
- * \def MGIN_HWIME 
+ * \def MGIN_HWIME
  * \brief The MGIN_HWIME notification message is sent when the user clicks
  *        the handwrite icon on the IME container window.
  */
@@ -90,9 +89,9 @@ extern  "C"
      * @{
      */
 
-/** 
+/**
  * \enum _IME_WINDOW_STATUS
- * \brief The enum specifies the status of adding a new IME window 
+ * \brief The enum specifies the status of adding a new IME window
  */
 enum _IME_WINDOW_STATUS {
     /**
@@ -105,11 +104,11 @@ enum _IME_WINDOW_STATUS {
      */
     IME_WINDOW_INVALID,
     /**
-     * the IME window has already added before. 
+     * the IME window has already added before.
      */
     IME_WINDOW_EXISTED,
     /**
-     * the IME window container is full. 
+     * the IME window container is full.
      */
     IME_WINDOW_FULL,
 };
@@ -187,7 +186,7 @@ typedef struct _IME_CONTAINER {
 } IME_CONTAINER;
 
 /**
- * \fn GHANDLE mgiCreateIMEContainer (int max_ime_wins, BOOL with_cont_win) 
+ * \fn GHANDLE mgiCreateIMEContainer (int max_ime_wins, BOOL with_cont_win)
  * \brief Create the container of input method windows.
  *
  * You can create a container of input method windows by this function, and
@@ -198,12 +197,12 @@ typedef struct _IME_CONTAINER {
  *
  * \return Return the handle of this ime windows container.
  *
- * \sa mgiDestroyIMEContainer 
+ * \sa mgiDestroyIMEContainer
  */
 GHANDLE mgiCreateIMEContainer (int max_ime_wins, BOOL with_cont_win);
 
 /**
- * \fn int mgiAddIMEWindow (GHANDLE ime, HWND ime_hwnd, const char* ime_name) 
+ * \fn int mgiAddIMEWindow (GHANDLE ime, HWND ime_hwnd, const char* ime_name)
  * \brief Add a ime window to the container.
  *
  * You can add a input method window to the certain container by this function.
@@ -214,12 +213,12 @@ GHANDLE mgiCreateIMEContainer (int max_ime_wins, BOOL with_cont_win);
  *
  * \return Return the handle of this ime windows container.
  *
- * \sa mgiRemoveIMEWindow 
+ * \sa mgiRemoveIMEWindow
  */
 int mgiAddIMEWindow (GHANDLE ime, HWND ime_hwnd, const char* ime_name);
 
 /**
- * \fn BOOL mgiRemoveIMEWindow (GHANDLE ime, const char* ime_name) 
+ * \fn BOOL mgiRemoveIMEWindow (GHANDLE ime, const char* ime_name)
  * \brief Remove a ime window from the container.
  *
  * You can remove a input method window from the certain container by this function.
@@ -230,7 +229,7 @@ int mgiAddIMEWindow (GHANDLE ime, HWND ime_hwnd, const char* ime_name);
  * \return Return TRUE if the ime window has been removed successfully,
  *         FALSE otherwise.
  *
- * \sa mgiAddIMEWindow 
+ * \sa mgiAddIMEWindow
  */
 BOOL mgiRemoveIMEWindow (GHANDLE ime, const char* ime_name);
 
@@ -249,7 +248,7 @@ BOOL mgiRemoveIMEWindow (GHANDLE ime, const char* ime_name);
 BOOL mgiSetActiveIMEWindow (GHANDLE ime, const char* ime_name);
 
 /**
- * \fn NOTIFPROC mgiSetNotificationCallback (GHANDLE ime, NOTIFPROC notif_proc) 
+ * \fn NOTIFPROC mgiSetNotificationCallback (GHANDLE ime, NOTIFPROC notif_proc)
  * \brief Set the ime windows container window's notification callback.
  *
  * You can set the ime windows container window's notification callback
@@ -260,7 +259,7 @@ BOOL mgiSetActiveIMEWindow (GHANDLE ime, const char* ime_name);
  *
  * \return Return old notification callback of the container window
  *
- * \sa mgiCreateIMEContainer 
+ * \sa mgiCreateIMEContainer
  */
 NOTIFPROC mgiSetNotificationCallback (GHANDLE ime, NOTIFPROC notif_proc);
 
@@ -274,7 +273,7 @@ NOTIFPROC mgiSetNotificationCallback (GHANDLE ime, NOTIFPROC notif_proc);
  *
  * \return Return TRUE if destroy successfully, FALSE otherwis.
  *
- * \sa mgiCreateIMEContainer 
+ * \sa mgiCreateIMEContainer
  */
 BOOL mgiDestroyIMEContainer (GHANDLE ime);
 
@@ -296,7 +295,7 @@ BOOL mgiDestroyIMEContainer (GHANDLE ime);
      * @{
      */
 
-/** 
+/**
  * The key of soft-keyboard's type.
  */
 typedef enum {
@@ -345,7 +344,7 @@ typedef struct _MGI_SOFTKEY_INFO {
 } MGI_SOFTKEY_INFO;
 
 /**
- * \var typedef void (*MGI_CB_Translate_Init) (void) 
+ * \var typedef void (*MGI_CB_Translate_Init) (void)
  * \brief Type of the translation method init callback procedure.
  *
  * This is the function type of translation method init callback procedure.
@@ -356,7 +355,7 @@ typedef struct _MGI_SOFTKEY_INFO {
 typedef void (*MGI_CB_Translate_Init) (void);
 
 /**
- * \var typedef void (*MGI_CB_Translate_Destroy) (void) 
+ * \var typedef void (*MGI_CB_Translate_Destroy) (void)
  * \brief Type of the translation method destroy callback procedure.
  *
  * This is the function type of translation method destroy callback procedure.
@@ -367,7 +366,7 @@ typedef void (*MGI_CB_Translate_Init) (void);
 typedef void (*MGI_CB_Translate_Destroy) (void);
 
 /**
- * \var typedef void (*MGI_CB_Translate_Draw) (HWND hwnd, HDC hdc, void* context) 
+ * \var typedef void (*MGI_CB_Translate_Draw) (HWND hwnd, HDC hdc, void* context)
  * \brief Type of the translation method draw callback procedure.
  *
  * This is the function type of translation method draw callback procedure.
@@ -382,7 +381,7 @@ typedef void (*MGI_CB_Translate_Draw) (HWND hwnd, HDC hdc, void* context);
  * \brief Type of the translation method alpha-translate callback procedure.
  *
  * This is the function type of translation method alpha-translate callback procedure.
- * If you set a new translation method for the soft-keyboard, you should translate 
+ * If you set a new translation method for the soft-keyboard, you should translate
  * alpha in this function.
  *
  */
@@ -394,26 +393,26 @@ typedef int (*MGI_CB_Translate_Alpha) (const char* origin_str, char* ret_value,
  * \brief Type of the translation method number-translate callback procedure.
  *
  * This is the function type of translation method number-translate callback procedure.
- * If you set a new translation method for the soft-keyboard, you should translate 
+ * If you set a new translation method for the soft-keyboard, you should translate
  * number in this function.
  *
  */
-typedef int (*MGI_CB_Translate_Number) (const char* origin_str, char* ret_value, 
+typedef int (*MGI_CB_Translate_Number) (const char* origin_str, char* ret_value,
                                         BOOL* write_directly);
 
 /**
- * \var typedef int (*MGI_CB_Translate_Punc) (const char origin_str, char* ret_value) 
+ * \var typedef int (*MGI_CB_Translate_Punc) (const char origin_str, char* ret_value)
  * \brief Type of the translation method punctuation-translate callback procedure.
  *
  * This is the function type of translation method punctuation-translate callback procedure.
- * If you set a new translation method for the soft-keyboard, you should translate 
+ * If you set a new translation method for the soft-keyboard, you should translate
  * punctuation in this function.
  *
  */
 typedef int (*MGI_CB_Translate_Punc) (const char origin_str, char* ret_value);
 
 /**
- * \var typedef int (*MGI_CB_Associate) (const char* origin_str, char* ret_value) 
+ * \var typedef int (*MGI_CB_Associate) (const char* origin_str, char* ret_value)
  * \brief Type of the translation method associate callback procedure.
  *
  * This is the function type of translation method associate callback procedure.
@@ -473,7 +472,7 @@ extern MGI_TRANSLATE_OPS en_trans_ops;
 extern MGI_TRANSLATE_OPS quanpin_trans_ops;
 
 /**
- * \fn HWND mgiCreateSoftKeyboardIME (MGI_SOFTKEYBOARD_INFO* sk_info, PLOGFONT ime_font) 
+ * \fn HWND mgiCreateSoftKeyboardIME (MGI_SOFTKEYBOARD_INFO* sk_info, PLOGFONT ime_font)
  * \brief Create the soft-keyboard input method window.
  *
  * You can create the soft-keyboard input method window by this function.
@@ -487,7 +486,7 @@ extern MGI_TRANSLATE_OPS quanpin_trans_ops;
 HWND mgiCreateSoftKeyboardIME (MGI_SOFTKEYBOARD_INFO* sk_info, PLOGFONT ime_font);
 
 /**
- * \fn BOOL mgiAddSKBTranslateOps (HWND ime_hwnd, MGI_TRANSLATE_OPS* trans_ops) 
+ * \fn BOOL mgiAddSKBTranslateOps (HWND ime_hwnd, MGI_TRANSLATE_OPS* trans_ops)
  * \brief Add a suite of translation operation to the soft-keyboard IME window.
  *
  * You can add a suite of translation operation to the soft-keyboard IME window
@@ -531,9 +530,9 @@ extern void destroy_soft_keyboard(void);
 
 #define NWORD        10
 #define MAXSIZE      300
-#define NALLOC       MAXSIZE 
+#define NALLOC       MAXSIZE
 #define THRESHHOLD_MIN    9
-#define THRESHHOLD_MAX    169 
+#define THRESHHOLD_MAX    169
 
 #define THRESHHOLD_FULLSCREEN	100
 
@@ -560,7 +559,7 @@ extern void destroy_soft_keyboard(void);
 #ifdef PDA_SIZE_160x160
 #define FULL_NWORD        6
 #else
-#define FULL_NWORD        10 
+#define FULL_NWORD        10
 #endif
 
 #endif
@@ -621,11 +620,11 @@ typedef struct _MGI_HANDWRITE_INFO {
  *               BOOL two_lines)
  * \brief Creates a GB2312 input method window.
  *
- * This function creates a GB2312 (a charset for simplified Chinese) input 
- * method window. Before calling this window, you must create a main window 
+ * This function creates a GB2312 (a charset for simplified Chinese) input
+ * method window. Before calling this window, you must create a main window
  * which acts as the hosting main window of the IME window.
  *
- * \param hosting The hosting window of the IME window. 
+ * \param hosting The hosting window of the IME window.
  *        Do not set it to be HWND_DESKTOP??.
  * \param lx lx,ty,rx,by: The position and size of the IME window.
  * \param ty lx,ty,rx,by: The position and size of the IME window.
@@ -635,16 +634,16 @@ typedef struct _MGI_HANDWRITE_INFO {
  *
  * \return The handle to the IME window.
  *
- * \note This function only define for MiniGUI-Processes, and can be 
+ * \note This function only define for MiniGUI-Processes, and can be
  *       called only by the server of MiniGUI-Processes.
  *
  * \sa GBIMEWindow
  */
-MG_EXPORT HWND GBIMEWindowEx (HWND hosting, int lx, int ty, int rx, int by, 
+MG_EXPORT HWND GBIMEWindowEx (HWND hosting, int lx, int ty, int rx, int by,
                 BOOL two_lines);
 
 /**
- * \fn HWND mgiCreateHandWriteIME (MGI_HANDWRITE_INFO* hw_info, PLOGFONT ime_font) 
+ * \fn HWND mgiCreateHandWriteIME (MGI_HANDWRITE_INFO* hw_info, PLOGFONT ime_font)
  * \brief Create the handwrite input method window.
  *
  * You can create the handwrite input method window by this function.
@@ -658,7 +657,7 @@ MG_EXPORT HWND GBIMEWindowEx (HWND hosting, int lx, int ty, int rx, int by,
 HWND mgiCreateHandWriteIME (MGI_HANDWRITE_INFO* hw_info, PLOGFONT ime_font);
 
 /**
- * \fn BOOL mgiSetHandWriteEngine (HWND hw_ime_hwnd, MGI_HW_ENGINE* engine) 
+ * \fn BOOL mgiSetHandWriteEngine (HWND hw_ime_hwnd, MGI_HW_ENGINE* engine)
  * \brief Set the handwrite input method recognization engine.
  *
  * You can set the handwrite input method recognization engine by this function.
@@ -694,8 +693,8 @@ typedef struct tagCHARINFO {
 
 typedef struct tagHWINFO {
     WORD *     m_data;
-    int        m_size; 
-    int        m_len; 
+    int        m_size;
+    int        m_len;
 
     BOOL       capture;
     int        old_x;
@@ -709,8 +708,8 @@ typedef struct tagHWINFO {
     RECT       *rcDraw;
     //RECT       rcClear;
     CHARINFO   charinfo[NWORD];
-    
-    RECT       rcchar; 
+
+    RECT       rcchar;
 /* added by snig for new hw */
     RECT       rcl;
     RECT       rcr;
@@ -736,6 +735,6 @@ extern MGI_HW_ENGINE hw_null_engine;
 
 #ifdef __cplusplus
 }
-#endif                          /* __cplusplus */
+#endif /* __cplusplus */
 
 #endif /* __MGI_H__ */

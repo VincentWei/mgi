@@ -3,7 +3,7 @@
 **
 ** resource.c: This file include some functions for system resource loading. 
 **
-** Copyright (C) 2003 ~ 2008 Feynman Software.
+** Copyright (C) 2003 ~ 2008 FMSoft.
 ** Copyright (C) 1999 ~ 2002 Wei Yongming.
 **
 ** Create date: 2008/07/15

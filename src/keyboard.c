@@ -13,7 +13,7 @@
  *          MiniGUI is a compact cross-platform Graphics User Interface 
  *         (GUI) support system for real-time embedded systems.
  *                  
- *             Copyright (C) 2002-2005 Feynman Software.
+ *             Copyright (C) 2002-2005 FMSoft.
  *             Copyright (C) 1998-2002 Wei Yongming.
  */
 
@@ -99,7 +99,7 @@ static MGI_SOFTKEY_INFO default_keyboard[] = {
     {SFT_SCANCODE, NULL, SCANCODE_ESCAPE, {0, 71, 24, 90}, 0},
     {SFT_SCANCODE, NULL, SCANCODE_SPACE, {24, 71, 211, 90}, 0},
     {SFT_SCANCODE, NULL, SCANCODE_INSERT, {211, 71, 234, 90}, 0},
-    {SFT_STRING, "北京飞漫软件技术有限公司\nBeijing Feynman Software Technology Co., Ltd.",
+    {SFT_STRING, "北京飞漫软件技术有限公司\nBeijing FMSoft Technology Co., Ltd.",
         0, {234, 71, 257, 90}, 0}
 };
 

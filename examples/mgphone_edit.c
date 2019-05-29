@@ -1,7 +1,7 @@
 /* 
 ** edit.c: Sample program mGpti (Client in MiniGUI-Processes).
 **
-** Copyright (C) 2007 Feynman Software.
+** Copyright (C) 2007 FMSoft.
 */
 
 #include <stdio.h>

@@ -4,9 +4,9 @@
 ** This file is created by 'words2c' by FMSoft (http://www.fmsoft.cn).
 ** Please do not modify it manually.
 **
-** Copyright (C) 2007 Feynman Software
+** Copyright (C) 2007 FMSoft
 **
-** All right reserved by Feynman Software.
+** All right reserved by FMSoft.
 **
 */
 

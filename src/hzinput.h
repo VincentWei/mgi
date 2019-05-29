@@ -5,7 +5,7 @@
 **
 ** Copyright (C) 2000 by Zheng Xiang (zx@minigui.org) 
 ** Copyright (C) 2000, 2001, 2002, Wei Yongming
-** Copyright (C) 2003 ~ 2007 Feynman Software.
+** Copyright (C) 2003 ~ 2007 FMSoft.
 */
 
 #ifndef __HZINPUT_H__

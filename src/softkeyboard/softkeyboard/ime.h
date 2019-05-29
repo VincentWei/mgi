@@ -1,9 +1,9 @@
 /*
 ** The external header for Input method.
 **
-** Copyright (C) 2007 Feynman Software
+** Copyright (C) 2007 FMSoft
 **
-** All right reserved by Feynman Software.
+** All right reserved by FMSoft.
 */
 
 #ifndef __IME_H

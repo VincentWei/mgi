@@ -3,17 +3,17 @@
  * \author He Jian <hejian@minigui.org>
  * \date 2008/08/12
  *
- * This file includes input method interfaces of mGi-phone. 
+ * This file includes input method interfaces of mGi-phone.
  */
 
 /*
  * $Id: mgime.h 100 2006-01-17 02:21:25Z qzlong $
  * mGi (MiniGUI Inputmethod) is a component of MiniGUI.
  *
- * MiniGUI is a compact cross-platform Graphics User Interface 
+ * MiniGUI is a compact cross-platform Graphics User Interface
  * (GUI) support system for real-time embedded systems.
- *                  
- * Copyright (C) 2002-2008 Feynman Software.
+ *
+ * Copyright (C) 2002-2019 FMSoft.
  */
 
 #ifndef _MGI_PHONE_H

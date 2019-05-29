@@ -3,7 +3,7 @@
 **
 ** misc.h: the head file for Miscellous module.
 **
-** Copyright (C) 2003 ~ 2007 Feynman Software.
+** Copyright (C) 2003 ~ 2007 FMSoft.
 ** Copyright (C) 1999 ~ 2002 Wei Yongming.
 **
 ** Create date: 1999/01/03

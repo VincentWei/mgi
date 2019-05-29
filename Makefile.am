@@ -1,6 +1,6 @@
 AUTOMAKE_OPTIONS = foreign
 
-SUBDIRS = m4 src include examples
+SUBDIRS = m4 src include
 
 # The directory where the include files will be installed
 # libmgiincludedir = $(includedir)/mgi

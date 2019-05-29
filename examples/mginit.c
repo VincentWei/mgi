@@ -6,7 +6,7 @@
 ** mginit.c: Sample program for MiniGUI Programming Guide
 **      A simple mginit program.
 **
-** Copyright (C) 2003 Feynman Software.
+** Copyright (C) 2003 FMSoft.
 **
 ** License: GPL
 */

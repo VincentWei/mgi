@@ -3,9 +3,9 @@
 **
 ** taskbar.c:  Feynman PMP taskbar control.
 **
-** Copyright (C) 2006 Feynman Software.
+** Copyright (C) 2006 FMSoft.
 **
-** All right reserved by Feynman Software.
+** All right reserved by FMSoft.
 **
 ** Current maintainer: Liu Peng.
 **

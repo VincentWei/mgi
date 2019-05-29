@@ -9,7 +9,7 @@
 ** Copyright (C) 1999 Kang Xiaoning.
 ** Copyright (C) 2000 Zheng Xiang.
 ** Copyright (C) 2000, 2001, 2002 Wei Yongming.
-** Copyright (C) 2003 ~ 2007 Feynman Software.
+** Copyright (C) 2003 ~ 2007 FMSoft.
 **
 ** Current maintainer: Wei Yongming
 ** Create date: 1999/04/01

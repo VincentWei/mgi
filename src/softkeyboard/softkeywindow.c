@@ -3,9 +3,9 @@
 **
 ** softkeywindow.c.
 **
-** Copyright (C) 2008 Feynman Software.
+** Copyright (C) 2008 FMSoft.
 **
-** All right reserved by Feynman Software.
+** All right reserved by FMSoft.
 **
 ** Create date: 2008/7/11
 */

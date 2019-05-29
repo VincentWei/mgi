@@ -14,7 +14,7 @@
  *          MiniGUI is a compact cross-platform Graphics User Interface 
  *         (GUI) support system for real-time embedded systems.
  *                  
- *             Copyright (C) 2002-2005 Feynman Software.
+ *             Copyright (C) 2002-2005 FMSoft.
  *             Copyright (C) 1998-2002 Wei Yongming.
  */
 

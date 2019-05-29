@@ -1,8 +1,8 @@
 /*
  * navigator bitmap binary data
-** Copyright (C) 2007 Feynman Software
+** Copyright (C) 2007 FMSoft
 **
-** All right reserved by Feynman Software.
+** All right reserved by FMSoft.
 **
 */
 

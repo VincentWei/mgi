@@ -3,7 +3,7 @@
 **
 ** common.c: This file include common functions for soft keyboard. 
 **
-** Copyright (C) 2003 ~ 2008 Feynman Software.
+** Copyright (C) 2003 ~ 2008 FMSoft.
 ** Copyright (C) 1999 ~ 2002 Wei Yongming.
 **
 ** Create date: 2008/07/13
