@@ -1,4 +1,6 @@
-INCLUDES=-I../include -I./ -I./softkeyboard -I./softkeyboard/softkeyboard -I./softkeyboard/animate
+AUTOMAKE_OPTIONS = subdir-objects
+
+AM_CPPFLAGS=-I../include -I./ -I./softkeyboard -I./softkeyboard/softkeyboard -I./softkeyboard/animate
 
 lib_LTLIBRARIES=libmgi.la
 

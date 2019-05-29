@@ -701,7 +701,7 @@ static unsigned char navigator_bits [] = {
 
 static BITMAP navigator_bmp = {
     0x10, 0x10, 0x02, 0x00,
-    0x0000f87e,
+    0x0000f87e, 0x00000000,
     0x000000e1, 0x0000000f, 0x0000001c4,
     navigator_bits
 };

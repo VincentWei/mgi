@@ -1606,8 +1606,8 @@ DefaultIMEWinProc(HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
     return DefaultMainWinProc(hWnd, message, wParam, lParam);
 }
 
-static int
-sk_IMEWinProc(HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
+static LRESULT
+sk_IMEWinProc(HWND hWnd, LINT message, WPARAM wParam, LPARAM lParam)
 {
     HDC     hdc;
     static BOOL fCaptured = FALSE;
@@ -1693,7 +1693,7 @@ sk_IMEWinProc(HWND hWnd, int message, WPARAM wParam, LPARAM lParam)
         break;
 
     case MSG_IME_GETTARGET:
-        return (int)sk_sg_hTargetWnd;
+        return (LRESULT)sk_sg_hTargetWnd;
 
     case MSG_SETFOCUS:
     case MSG_KILLFOCUS:

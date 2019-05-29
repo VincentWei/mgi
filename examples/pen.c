@@ -48,7 +48,7 @@ static unsigned char pen_bits [] = {
 
 BITMAP pen_bmp = {
     0x00, 0x10, 0x02, 0x00,
-    0x00000000,
+    0x00000000, 0x00000000,
     0x0000000c, 0x0000000d, 0x00000018,
     pen_bits
 };

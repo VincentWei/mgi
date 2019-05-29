@@ -1,13 +1,13 @@
 AC_PREREQ(2.52)
 
-AC_INIT([src/mgime.c])
+AC_INIT(libmgi,2.0.3,-)
+AC_CONFIG_SRCDIR([src/mgime.c])
 
 MGi_MAJOR_VERSION=2
 MGi_MINOR_VERSION=0
 MGi_MICRO_VERSION=3
 MGi_INTERFACE_AGE=0
 MGi_BINARY_AGE=0
-
 MGi_VERSION=$MGi_MAJOR_VERSION.$MGi_MINOR_VERSION.$MGi_MICRO_VERSION
 
 AC_SUBST(MGi_MAJOR_VERSION)
@@ -44,7 +44,7 @@ AC_PROG_MAKE_SET
 
 dnl ========================================================================
 dnl Put the name and version of the package here
-AM_INIT_AUTOMAKE(libmgi,$MGi_VERSION,-)
+AM_INIT_AUTOMAKE
 
 dnl AC_DEFINE_UNQUOTED(MGI_MAJOR_VERSION, $MGi_MAJOR_VERSION, [MGi major version])
 dnl AC_DEFINE_UNQUOTED(MGI_MINOR_VERSION, $MGi_MINOR_VERSION, [MGi minor version])

@@ -1,4 +1,4 @@
-INCLUDES=-I../include
+AM_CPPFLAGS=-I../include
 
 COMM_PROGRAM=phonetest switchtest sktest hwtest  skb_demo
 
